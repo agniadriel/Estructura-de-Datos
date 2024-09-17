@@ -1,0 +1,39 @@
+class Persona:  
+    def __init__(self, nombre, apellidopat, apellidomat):
+        self.nombre = nombre
+        self.apellidopat = apellidopat  
+        self.apellidomat = apellidomat  
+
+    def mostrarnombrecompleto(self):
+        txt = "{0}, {2} {1}"
+        return txt.format(self.nombre, self.apellidomat, self.apellidopat)
+
+    def mostrarnombre(self):
+        print(self.nombre)
+
+
+class Estudiante(Persona):  # La clase debe heredar correctamente de Persona
+    def __init__(self, nombre, apellidopat, apellidomat, profesion):
+        super().__init__(nombre, apellidopat, apellidomat)
+        self.profesion = profesion
+
+    def mostrarnombre(self):
+        super().mostrarnombre()
+
+estudiante1 = Estudiante("Juan Daniel", "Choque", "Humana", "Ingeniero en Sistemas")
+print(estudiante1.mostrarnombrecompleto())
+print(estudiante1.profesion)
+
+
+
+'''''
+cola1 = Colasimple(6)
+cola1.enqueue(8)
+cola1.enqueue(2)
+cola1.enqueue(5)
+cola1.enqueue(10)
+cola1.enqueue(15)
+cola1.enqueue(20)
+cola1.mostrar()
+cola1.dequeue()
+cola1.mostrar() ejercicio de la cola1'''
